@@ -112,9 +112,9 @@ csvUtility.directive('downloadCsv', function () {
           _content[i] = _content[i].join(',');
         }
         _content = _content.join("\n");
-        _file += _content;
+        // _file += _content;
         // Will move the download function somewhere else, is taking too much space here
-        download(_file, attrs.filename);
+        download(_content, attrs.filename);
         return true;
       });
       return true;
